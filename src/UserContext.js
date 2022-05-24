@@ -35,7 +35,9 @@ export const UserStorage = ({children}) => {
           userLogout()
         } finally {
           setLoading(false)
-        }
+        } 
+      } else {
+        setLogin(false)
       }
     }
     autoLogin()
@@ -55,7 +57,8 @@ export const UserStorage = ({children}) => {
       setLoading(true)
       const {url, options} = TOKEN_POST({username, password})
       const tokenRes = await fetch(url, options)
-      if(!tokenRes.ok) throw new Error(`Error: ${tokenRes.statusText}`)
+      console.log(tokenRes);
+      if(!tokenRes.ok) throw new Error(`Error: ${tokenRes.status}`)
       const {token} = await tokenRes.json()
       window.localStorage.setItem('token', token)
       await getUser(token)

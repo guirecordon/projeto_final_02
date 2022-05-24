@@ -1,7 +1,9 @@
 import React from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Routes, Route } from 'react-router-dom'
 import { UserContext } from '../../UserContext'
+import LoginCreate from './LoginCreate'
 import LoginForm from './LoginForm'
+import LoginPasswordLost from './LoginPasswordLost'
 
 const Login = () => {
   const {login} = React.useContext(UserContext)
@@ -11,6 +13,8 @@ const Login = () => {
     <div>
       <Routes>
         <Route path='/' element={<LoginForm />} />
+        <Route path='perdeu' element={<LoginPasswordLost />} />
+        <Route path='criar' element={<LoginCreate />} />
       </Routes>
     </div>
   )

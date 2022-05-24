@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { TOKEN_POST, USER_GET } from '../../api'
 import useForm from '../../Hooks/useForm'
 import { UserContext } from '../../UserContext'
 import Button from '../Forms/Button'
