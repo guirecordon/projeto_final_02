@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { COMMENT_POST } from '../api'
+import { COMMENT_POST } from '../Api'
 import {ReactComponent as Enviar} from '../Assets/enviar.svg'
 import Error from '../Components/Helper/Error'
 import useFetch from '../Hooks/useFetch'

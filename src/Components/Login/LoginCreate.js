@@ -1,5 +1,5 @@
 import React from 'react'
-import { USER_POST } from '../../api'
+import { USER_POST } from '../../Api'
 import useFetch from '../../Hooks/useFetch'
 import useForm from '../../Hooks/useForm'
 import { UserContext } from '../../UserContext'
