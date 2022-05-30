@@ -3,7 +3,7 @@ import Feed from '../Feed/Feed'
 
 const Home = () => {
   return (
-    <section><Feed /></section>
+    <section className="container mainConatiner"><Feed /></section>
   )
 }
 
