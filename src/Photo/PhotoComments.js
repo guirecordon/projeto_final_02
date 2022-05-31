@@ -1,6 +1,7 @@
 import React from 'react'
 import { UserContext } from '../UserContext'
 import PhotoCommentsForm from './PhotoCommentsForm'
+import styles from './PhotoComments.module.css'
 
 const PhotoComments = (props) => {
   const [comments, setComments] = React.useState(() => props.comments)
@@ -13,7 +14,7 @@ const PhotoComments = (props) => {
 
   return (
     <> 
-      <ul ref={commentsSection}>
+      <ul className={styles.comments} ref={commentsSection}>
         {comments.map(comment => <li key={comment.comment_ID}>
           <b>{comment.comment_author}: </b>
           <span>{comment.comment_content}</span>
