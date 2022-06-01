@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, Routes, Route } from 'react-router-dom'
+import NotFound from '../../NotFound'
 import { UserContext } from '../../UserContext'
 import LoginCreate from './LoginCreate'
 import LoginForm from './LoginForm'
@@ -15,6 +16,7 @@ const Login = () => {
         <Route path='/' element={<LoginForm />} />
         <Route path='perdeu' element={<LoginPasswordLost />} />
         <Route path='criar' element={<LoginCreate />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   )
