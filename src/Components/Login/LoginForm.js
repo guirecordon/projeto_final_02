@@ -5,6 +5,7 @@ import { UserContext } from '../../UserContext'
 import Button from '../Forms/Button'
 import Input from '../Forms/Input'
 import Error from '../Helper/Error'
+import Head from '../Helper/Head'
 
 const LoginForm = () => {
   const username = useForm();
@@ -22,6 +23,7 @@ const LoginForm = () => {
 
   return (
     <section>
+      <Head title="Login" />
       <form onSubmit={handleSubmit}>
         <div>
           <Input type="text" label="Usuário" name="username" {...username} />

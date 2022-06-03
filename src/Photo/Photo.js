@@ -5,6 +5,7 @@ import useFetch from '../Hooks/useFetch'
 import Error from '../Components/Helper/Error'
 import Loading from '../Components/Helper/Loading'
 import PhotoContent from '../Photo/PhotoContent'
+import Head from '../Components/Helper/Head'
 
 const Photo = () => {
   const {id} = useParams()
@@ -18,6 +19,7 @@ const Photo = () => {
   if(error) return <Error error={error} />
   if(loading) return <Loading />
   if(data) return <section className='container mainContainer'>
+    <Head title={data.photo.title} />
     <PhotoContent data={data} single={true} />
     </section>
   else return null
